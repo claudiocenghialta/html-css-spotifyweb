@@ -4,16 +4,59 @@
     box-sizing: border-box;
 }
 
+/* tipografia */
+body {
+    font-family: 'Cabin', sans-serif;
+}
+
+a {
+    color: #777A7E;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
 .container-general {
     display: flex;
 }
 
 /* inizio section left */
 .section-left {
-    flex: 0 0 200px;
-    height: 100vh;
+    flex: 0 0 20px;
+    height: calc(100vh - 90px);
     background-color: black;
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 900;
+    color: white;
+}
+
+.logo a {
+    color: white;
+}
+
+.left-text {
+    display: none;
+}
+
+.logo .left-text::after {
+    font-size: 10px;
+    content: '\00A9';
+    position: absolute;
+    top: 2;
+}
+
+.left-playlist {
+    display: none;
 }
 
 /* inizio section right */
@@ -47,13 +90,6 @@ main {
     overflow-y: auto;
 }
 
-.prova {
-    height: 300px;
-    width: 300px;
-    background-color: yellow;
-    margin: 10px;
-}
-
 /* inizio player bottom */
 .player-bottom {
     height: 90px;
@@ -62,4 +98,18 @@ main {
     left: 0;
     right: 0;
     background-color: #282828;
+}
+
+@media screen and (min-width:768px) {
+    .section-left {
+        flex: 0 0 230px;
+    }
+
+    .left-text {
+        display: inline;
+    }
+
+    .left-playlist {
+        display: block;
+    }
 }
