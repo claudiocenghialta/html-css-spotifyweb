@@ -3,3 +3,63 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.container-general {
+    display: flex;
+}
+
+/* inizio section left */
+.section-left {
+    flex: 0 0 200px;
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+/* inizio section right */
+.section-right {
+    flex: 1;
+    overflow: hidden;
+    background-color: #141922;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-upgrade {
+    height: 70px;
+    background-color: #080B12;
+}
+
+.rigth-navtop {
+    height: 70px;
+}
+
+main {
+    height: calc(100vh - 270px);
+    padding: 20px;
+}
+
+.main-content {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+
+.prova {
+    height: 300px;
+    width: 300px;
+    background-color: yellow;
+    margin: 10px;
+}
+
+/* inizio player bottom */
+.player-bottom {
+    height: 90px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #282828;
+}
