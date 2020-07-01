@@ -129,14 +129,18 @@ li.left-nav-active a {
     border-radius: 20px;
     text-transform: uppercase;
     font-size: 14px;
+    transition: 0.15s;
 }
 
-/*
-.rigth-nav-top {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
+a .btn-upgrade {
+    color: white;
+}
+
+.btn-upgrade:hover {
+    color: white;
+    transform: scale(105%);
+}
+
 .rigth-nav-top ul {
     display: flex;
     flex-wrap: wrap;
@@ -177,6 +181,85 @@ main {
     display: flex;
     flex-wrap: wrap;
     overflow-y: auto;
+}
+
+section {
+    margin-top: 10px;
+}
+
+section h3 {
+    margin: 10px 0;
+}
+
+section h4 {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #6D7075;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    /* width: 150px; */
+    /* height: 210px; */
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    margin: 10px 10px 10px 0;
+    flex: 1 0 150px;
+}
+
+.card-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-overlay {
+    display: none;
+}
+
+.card:hover .card-overlay {
+    display: block;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.card-overlay-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 45px;
+}
+
+.card img,
+.card .card-img {
+    width: 100%
+}
+
+.card-title {
+    width: 100%;
+}
+
+.card-sub-title {
+    width: 100%;
+    font-size: 14px;
+    color: #6D7075;
+}
+
+#sec-artists .cards .card .card-img {
+    border-radius: 50%;
 }
 
 /* inizio player bottom */
