@@ -7,6 +7,7 @@
 /* tipografia */
 body {
     font-family: 'Cabin', sans-serif;
+    font-weight: 700;
 }
 
 a {
@@ -19,6 +20,10 @@ a:hover {
     text-decoration: none;
 }
 
+ul li {
+    list-style: none;
+}
+
 .container-general {
     display: flex;
 }
@@ -28,7 +33,7 @@ a:hover {
     flex: 0 0 20px;
     height: calc(100vh - 90px);
     background-color: black;
-    color: white;
+    color: #6A6A6A;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -38,10 +43,15 @@ a:hover {
     font-size: 20px;
     font-weight: 900;
     color: white;
+    padding: 20px 20px;
 }
 
 .logo a {
     color: white;
+}
+
+.left-nav li {
+    padding: 5px 20px;
 }
 
 .left-text {
@@ -55,8 +65,35 @@ a:hover {
     top: 2;
 }
 
+li.left-nav-active {
+    color: white;
+    font-weight: 900;
+    border-left: 2px solid #ADFF2F;
+    padding-left: 18px;
+}
+
 .left-playlist {
     display: none;
+}
+
+.left-bottom>div {
+    padding: 5px 20px;
+}
+
+.left-bottom-username {
+    border-top: 1px solid white;
+    padding: 7px 0;
+}
+
+.left-bottom-username-container {
+    color: white;
+}
+
+.left-bottom-username-container .fa-user {
+    background-color: #808080;
+    border-radius: 50%;
+    padding: 3px 5px;
+    margin-right: 5px;
 }
 
 /* inizio section right */
@@ -111,5 +148,28 @@ main {
 
     .left-playlist {
         display: block;
+        margin-top: 20px;
+    }
+
+    .left-playlist li {
+        padding: 5px 20px;
+    }
+
+    .playlist-title {
+        color: white;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    .playlist-create-new {
+        font-size: 1.1rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .playlist-create-new i {
+        font-size: 40px;
+        margin-right: 10px;
     }
 }
