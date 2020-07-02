@@ -140,7 +140,7 @@ a .btn-upgrade {
 
 .btn-upgrade:hover {
     color: white;
-    transform: scale(105%);
+    transform: scale(1.05);
 }
 
 .rigth-nav-top ul {
@@ -384,7 +384,7 @@ section h4 {
 }
 
 .player-center-top a i:hover {
-    transform: scale(120%);
+    transform: scale(1.2);
 }
 
 .player-center-bottom {
@@ -421,7 +421,7 @@ section h4 {
 }
 
 .player-right a i:hover {
-    transform: scale(120%);
+    transform: scale(1.2);
 }
 
 .progress-bar {
