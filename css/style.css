@@ -232,18 +232,18 @@ section h4 {
 }
 
 #sec-recently-played .card {
-    flex: 1 0 150px;
-    max-width: 250px;
+    flex: 1 0 200px;
+    max-width: 300px;
 }
 
 #sec-created-for .card {
-    flex: 1 0 150px;
-    max-width: 250px;
+    flex: 1 0 200px;
+    max-width: 300px;
 }
 
 #sec-artists .card {
-    flex: 1 0 150px;
-    max-width: 250px;
+    flex: 1 0 200px;
+    max-width: 300px;
 }
 
 .card-img {
@@ -324,8 +324,6 @@ section h4 {
     align-items: center;
 }
 
-.player-left-song-img {}
-
 .player-left-song-details {
     display: flex;
     flex-direction: column;
@@ -369,20 +367,37 @@ section h4 {
     flex: 1 0;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
+}
+
+.player-center-top a i {
+    font-size: 16px;
+    color: whitesmoke;
+    margin-right: 30px;
+}
+
+.player-center-top a i.fa-play-circle {
+    font-size: 34px;
+    transition: 0.1s;
+}
+
+.player-center-top a i:hover {
+    transform: scale(120%);
 }
 
 .player-center-bottom {
     flex: 1 0;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 #time-bar {
-    width: 150px;
+    width: 60%;
     margin: 0 10px;
 }
 
@@ -403,6 +418,10 @@ section h4 {
     font-size: 16px;
     color: whitesmoke;
     margin-right: 10px;
+}
+
+.player-right a i:hover {
+    transform: scale(120%);
 }
 
 .progress-bar {
@@ -492,7 +511,7 @@ section h4 {
     }
 
     #sec-recently-played .card {
-        flex: 0 0 150px;
+        flex: 0 0 200px;
     }
 
     .player-left-song-icons {
