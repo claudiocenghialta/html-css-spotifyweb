@@ -145,13 +145,14 @@ a .btn-upgrade {
 
 .rigth-nav-top ul {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
 }
 
 .rigth-nav-top ul li {
-    padding: 20px 10px;
+    padding: 5px 0px;
     text-transform: uppercase;
     font-size: 13px;
 }
@@ -309,11 +310,11 @@ section h4 {
 }
 
 .player-item {
-    flex: 1 0;
+    flex: 1 1;
 }
 
 .player-left {
-    flex: 1 0;
+    flex: 1 1;
     margin: 0 5px;
 }
 
@@ -356,7 +357,7 @@ section h4 {
 }
 
 .player-center {
-    flex: 4 0;
+    flex: 2 1;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -364,7 +365,7 @@ section h4 {
 }
 
 .player-center-top {
-    flex: 1 0;
+    flex: 1 1;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -388,7 +389,7 @@ section h4 {
 }
 
 .player-center-bottom {
-    flex: 1 0;
+    flex: 1 1;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -406,12 +407,13 @@ section h4 {
 }
 
 .player-right {
-    flex: 1 0;
+    flex: 1 1;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 0 5px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 0 2px;
 }
 
 .player-right a i {
@@ -454,16 +456,33 @@ section h4 {
     background-color: #FFFFFF;
 }
 
+.player-right-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.player-right-volume-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
 #volume-bar {
-    width: 150px;
+    width: 100%;
     margin-right: 10px;
+    /* min-width: 50px; */
 }
 
 #volume-level {
     width: 20%;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
     .section-left {
         flex: 0 0 230px;
         align-items: flex-start;
@@ -501,9 +520,33 @@ section h4 {
         font-size: 40px;
         margin-right: 10px;
     }
+
+    .rigth-nav-top ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rigth-nav-top ul li {
+        padding: 20px 10px;
+    }
+
+    .player-right {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0 5px;
+    }
+
+    .player-right-volume-controls {
+        margin-top: 0;
+    }
 }
 
-@media screen and (min-width:992px) {
+@media screen and (min-width: 992px) {
     #sec-recently-played .cards {
         justify-content: flex-start;
         align-items: space-around;
@@ -515,7 +558,6 @@ section h4 {
     }
 
     .player-left-song-icons {
-        display: flex;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
