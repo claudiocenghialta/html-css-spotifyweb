@@ -15,7 +15,8 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+a:hover,
+a:hover i {
     color: white;
     text-decoration: none;
 }
@@ -37,6 +38,8 @@ ul li {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    text-align: center;
 }
 
 .logo {
@@ -102,7 +105,6 @@ li.left-nav-active a {
     background-color: #808080;
     border-radius: 50%;
     padding: 3px 5px;
-    margin-right: 5px;
 }
 
 /* inizio section right top*/
@@ -178,9 +180,10 @@ main {
 
 .main-content {
     height: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;
+    flex-wrap: wrap; */
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 section {
@@ -200,20 +203,47 @@ section h4 {
 .cards {
     display: flex;
     flex-direction: row;
+}
+
+#sec-recently-played .cards {
     justify-content: space-around;
     align-items: space-around;
     flex-wrap: wrap;
 }
 
+#sec-created-for .cards {
+    justify-content: flex-start;
+    align-items: space-around;
+    flex-wrap: wrap;
+}
+
+#sec-artists .cards {
+    justify-content: flex-start;
+    align-items: space-around;
+    flex-wrap: wrap;
+}
+
 .card {
-    /* width: 150px; */
-    /* height: 210px; */
     text-align: center;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.1);
+    /* background-color: rgba(255, 255, 255, 0.1); */
     padding: 10px;
     margin: 10px 10px 10px 0;
+}
+
+#sec-recently-played .card {
     flex: 1 0 150px;
+    max-width: 250px;
+}
+
+#sec-created-for .card {
+    flex: 1 0 150px;
+    max-width: 250px;
+}
+
+#sec-artists .card {
+    flex: 1 0 150px;
+    max-width: 250px;
 }
 
 .card-img {
@@ -270,11 +300,155 @@ section h4 {
     left: 0;
     right: 0;
     background-color: #282828;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: whitesmoke;
+    font-size: 14px;
+}
+
+.player-item {
+    flex: 1 0;
+}
+
+.player-left {
+    flex: 1 0;
+    margin: 0 5px;
+}
+
+.player-left-song {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player-left-song-img {}
+
+.player-left-song-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 5px;
+}
+
+.player-left-song-artist a {
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.player-left-song-title {
+    color: #76797D;
+}
+
+.player-left-song-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 5px;
+}
+
+.player-left-song-icons a {
+    font-size: 16px;
+    color: #76797d;
+    margin: 2px 5px;
+}
+
+.player-center {
+    flex: 4 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.player-center-top {
+    flex: 1 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.player-center-bottom {
+    flex: 1 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#time-bar {
+    width: 150px;
+    margin: 0 10px;
+}
+
+#time-level {
+    width: 40%;
+}
+
+.player-right {
+    flex: 1 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 5px;
+}
+
+.player-right a i {
+    font-size: 16px;
+    color: whitesmoke;
+    margin-right: 10px;
+}
+
+.progress-bar {
+    height: 5px;
+    border-radius: 2px;
+    background-color: #76797d;
+}
+
+.progress-bar-level {
+    height: 5px;
+    border-radius: 2px;
+    background-color: #C1C1C1;
+    position: relative;
+}
+
+.progress-bar:hover .progress-bar-level {
+    background-color: #B9F455;
+}
+
+.progress-bar:hover .progress-bar-level::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+}
+
+#volume-bar {
+    width: 150px;
+    margin-right: 10px;
+}
+
+#volume-level {
+    width: 20%;
 }
 
 @media screen and (min-width:768px) {
     .section-left {
         flex: 0 0 230px;
+        align-items: flex-start;
+        text-align: left;
     }
 
     .left-text {
@@ -307,5 +481,24 @@ section h4 {
     .playlist-create-new a i {
         font-size: 40px;
         margin-right: 10px;
+    }
+}
+
+@media screen and (min-width:992px) {
+    #sec-recently-played .cards {
+        justify-content: flex-start;
+        align-items: space-around;
+        flex-wrap: wrap;
+    }
+
+    #sec-recently-played .card {
+        flex: 0 0 150px;
+    }
+
+    .player-left-song-icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
     }
 }
